@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main # название ветки лучше явно уточнить
+          password: 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 # для private репозитория потребуется логин-token
+          basedir: file://c:/tmp/git-c # куда будет клонироваться удаленный репозиторий
+          username: dmt-100
+          clone-on-start: 'true' # клонировать удаленный git репозиторий в локальный git (чтобы не делать это вручную)
+          uri: https://github.com/dmt-100/prop-test.git # доступ к git репозиторию
+  application:
+    name: github-config-server
+logging:
+  pattern:
+    console: '%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n' # более короткое отображение логов
+server:
+  port: '8888'
