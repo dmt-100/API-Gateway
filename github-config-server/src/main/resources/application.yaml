@@ -13,6 +13,6 @@ spring:
     name: github-config-server
 logging:
   pattern:
-    console: '%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n' # более короткое отображение логов
+    console: '%C{1.} [%-5level] %d{HH:mm:ss} - %msg%n' #  более короткое отображение логов
 server:
   port: '8888'
